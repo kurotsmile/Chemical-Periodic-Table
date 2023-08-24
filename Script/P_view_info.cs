@@ -220,6 +220,7 @@ public class P_view_info : MonoBehaviour
         {
             PlayerPrefs.SetInt("pin_" + this.p_cur.index_p, 1);
             this.p_cur.is_pin = true;
+            this.app.carrot.play_vibrate();
         }
         this.check_status_pin();
         this.app.play_sound();

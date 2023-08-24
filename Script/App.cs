@@ -21,10 +21,12 @@ public class App : MonoBehaviour
 
     private float size_cell_x = 48f;
     public AudioClip sound_click_clip;
+    public AudioSource sound_bk_music;
 
     void Start()
     {
         this.carrot.Load_Carrot(this.check_exit_app);
+        this.carrot.game.load_bk_music(this.sound_bk_music);
         this.carrot.change_sound_click(this.sound_click_clip);
 
         this.panel_info.gameObject.SetActive(false);
