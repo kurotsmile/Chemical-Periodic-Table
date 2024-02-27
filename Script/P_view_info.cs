@@ -224,6 +224,7 @@ public class P_view_info : MonoBehaviour
         }
         this.check_status_pin();
         this.app.play_sound();
+        this.app.carrot.play_vibrate();
     }
 
     private void check_status_pin()
