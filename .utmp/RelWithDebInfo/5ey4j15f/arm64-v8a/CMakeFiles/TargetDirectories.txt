@@ -1,0 +1,8 @@
+D:/Chemical Periodic Table/.utmp/RelWithDebInfo/5ey4j15f/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/Chemical Periodic Table/.utmp/RelWithDebInfo/5ey4j15f/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/Chemical Periodic Table/.utmp/RelWithDebInfo/5ey4j15f/arm64-v8a/GameActivity/CMakeFiles/game.dir
+D:/Chemical Periodic Table/.utmp/RelWithDebInfo/5ey4j15f/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+D:/Chemical Periodic Table/.utmp/RelWithDebInfo/5ey4j15f/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+D:/Chemical Periodic Table/.utmp/RelWithDebInfo/5ey4j15f/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+D:/Chemical Periodic Table/.utmp/RelWithDebInfo/5ey4j15f/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+D:/Chemical Periodic Table/.utmp/RelWithDebInfo/5ey4j15f/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

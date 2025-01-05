@@ -1,0 +1,12 @@
+# ninja log v5
+49	600	7577834000551376	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	c2d28b5bbd13a21c
+602	1249	7577834005828595	D:/Chemical Periodic Table/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5ey4j15f/obj/armeabi-v7a/libswappywrapper.so	229d8a92681300b7
+16	2446	7577834019012986	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	e7541ec59faa98f3
+1	2520	7577834019978630	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ac28e17669ca2d13
+22	2535	7577834019887555	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f3ae7cf5b6788b7
+34	2756	7577834022397204	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e9b547086b36c4b4
+42	2777	7577834022593620	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a593ed740228961f
+12	2935	7577834024200157	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	a4e34cef4ad04e3f
+29	3112	7577834025970367	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	16265720eed2cb77
+7	3365	7577834028470949	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	e68f98df81b4c363
+3366	3566	7577834030506378	D:/Chemical Periodic Table/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5ey4j15f/obj/armeabi-v7a/libgame.so	e47e017890934051

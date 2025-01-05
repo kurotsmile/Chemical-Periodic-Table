@@ -31,7 +31,12 @@ public class App : MonoBehaviour
     {
         this.carrot.Load_Carrot(this.check_exit_app);
         this.carrot.game.load_bk_music(this.sound_bk_music);
+        this.carrot.game.act_click_watch_ads_in_music_bk=this.ads.On_show_rewarded;
+        this.carrot.shop.onCarrotPaySuccess += onCarrotPaySuccess;
+        this.carrot.shop.onCarrotRestoreSuccess += onCarrotRestoreSuccess;
         this.carrot.change_sound_click(this.sound_click_clip);
+        this.ads.On_Load();
+        this.ads.onRewardedSuccess=this.carrot.game.OnRewardedSuccess;
 
         this.panel_info.gameObject.SetActive(false);
         this.panel_search.SetActive(false);
@@ -57,7 +62,8 @@ public class App : MonoBehaviour
         {
             this.close_info();
             this.carrot.set_no_check_exit_app();
-        }else if (this.panel_search.activeInHierarchy)
+        }
+        else if (this.panel_search.activeInHierarchy)
         {
             this.close_search();
             this.carrot.set_no_check_exit_app();
@@ -93,7 +99,7 @@ public class App : MonoBehaviour
     public void btn_zoom_in()
     {
         this.size_cell_x += 5f;
-       this.gridLayout_main.cellSize = new Vector2(this.size_cell_x, this.size_cell_x);
+        this.gridLayout_main.cellSize = new Vector2(this.size_cell_x, this.size_cell_x);
         this.check_resize_cell();
         this.play_sound();
     }
@@ -118,14 +124,14 @@ public class App : MonoBehaviour
         else
             this.obj_button_zoom_in.interactable = true;
 
-        for(int i = 0; i < this.p.Length; i++)
+        for (int i = 0; i < this.p.Length; i++)
         {
             if (this.size_cell_x > 80f)
             {
                 this.p[i].txt_ntk.gameObject.SetActive(true);
                 this.p[i].txt_electron.gameObject.SetActive(true);
                 this.p[i].txt_am_dien.gameObject.SetActive(true);
-                if(this.size_cell_x<100) this.p[i].txt_key.fontSize = 30;
+                if (this.size_cell_x < 100) this.p[i].txt_key.fontSize = 30;
                 else this.p[i].txt_key.fontSize = 40;
             }
             else
@@ -155,7 +161,7 @@ public class App : MonoBehaviour
 
     public void btn_search_done()
     {
-        this.ScrollRect_main.normalizedPosition = new Vector2(-1f,-1f);
+        this.ScrollRect_main.normalizedPosition = new Vector2(-1f, -1f);
         this.act_p_none(false);
         for (int i = 0; i < this.p.Length; i++)
         {
@@ -181,7 +187,7 @@ public class App : MonoBehaviour
     {
         this.ScrollRect_main.normalizedPosition = new Vector2(-1f, -1f);
         this.panel_info.gameObject.SetActive(false);
-        for (int i = 0; i < this.p.Length; i++)if(this.p[i].is_pin==false)this.p[i].gameObject.SetActive(false);
+        for (int i = 0; i < this.p.Length; i++) if (this.p[i].is_pin == false) this.p[i].gameObject.SetActive(false);
         for (int i = 0; i < this.p_none.Length; i++) this.p_none[i].gameObject.SetActive(false);
         this.obj_menu_main.SetActive(false);
         this.obj_menu_pin.SetActive(true);
@@ -200,7 +206,7 @@ public class App : MonoBehaviour
 
     public void delete_list_pin()
     {
-        for (int i = 0; i < this.p.Length; i++) if (this.p[i].is_pin) { PlayerPrefs.DeleteKey("pin_" + this.p[i].index_p);this.p[i].is_pin = false; }
+        for (int i = 0; i < this.p.Length; i++) if (this.p[i].is_pin) { PlayerPrefs.DeleteKey("pin_" + this.p[i].index_p); this.p[i].is_pin = false; }
         this.check_list_pin();
         this.close_list_pin();
     }
@@ -218,7 +224,7 @@ public class App : MonoBehaviour
 
     public void show_setting()
     {
-       this.carrot.Create_Setting();
+        this.carrot.Create_Setting();
     }
 
     public void app_share()
@@ -237,5 +243,26 @@ public class App : MonoBehaviour
     {
         this.play_sound();
         this.carrot.shop.restore_product();
+    }
+
+    private void onCarrotPaySuccess(string id_product)
+    {
+        if (id_product == this.carrot.shop.get_id_by_index(0))
+        {
+            this.carrot.Show_msg("Remove Ads", "Remove Ads Success!", Msg_Icon.Success);
+            this.ads.RemoveAds();
+        }
+    }
+
+    private void onCarrotRestoreSuccess(string[] array_id)
+    {
+        foreach (string id_product in array_id)
+        {
+            if (id_product == this.carrot.shop.get_id_by_index(0))
+            {
+                this.carrot.Show_msg("Remove Ads", "Remove Ads Success!", Msg_Icon.Success);
+                this.ads.RemoveAds();
+            }
+        }
     }
 }
