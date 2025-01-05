@@ -4,7 +4,11 @@ using UnityEngine.UI;
 
 public class App : MonoBehaviour
 {
+    [Header("Main Obj")]
     public Carrot.Carrot carrot;
+    public Carrot_ads_manage ads;
+
+    [Header("UI")]
     public P_view_info panel_info;
     public ScrollRect ScrollRect_main;
     public GridLayoutGroup gridLayout_main;
@@ -62,7 +66,7 @@ public class App : MonoBehaviour
 
     public void show_info(P_Element p)
     {
-        this.carrot.ads.show_ads_Interstitial();
+        this.ads.On_show_interstitial();
         this.panel_info.view_info(p);
         this.play_sound();
     }

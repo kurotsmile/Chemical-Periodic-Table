@@ -193,7 +193,7 @@ public class P_view_info : MonoBehaviour
 
     public void btn_next()
     {
-        this.app.carrot.ads.show_ads_Interstitial();
+        this.app.ads.On_show_interstitial();
         int index_p_view = this.p_cur.index_p+1;
         if (index_p_view >= 118) index_p_view = 0;
         this.view_info(this.app.p[index_p_view]);
@@ -202,7 +202,7 @@ public class P_view_info : MonoBehaviour
 
     public void btn_prev()
     {
-        this.app.carrot.ads.show_ads_Interstitial();
+        this.app.ads.On_show_interstitial();
         int index_p_view = this.p_cur.index_p-1;
         if (index_p_view < 0) index_p_view = 117;
         this.view_info(this.app.p[index_p_view]);
