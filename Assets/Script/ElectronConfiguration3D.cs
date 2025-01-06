@@ -154,12 +154,14 @@ public class ElectronConfiguration3D : MonoBehaviour
     }
 
     public void On_Next(){
+        this.app.carrot.play_sound_click();
         this.index_view_cur++;
         if(this.index_view_cur>=this.app.p.Length) this.index_view_cur=0;
         this.Update_p_info();
     }
 
     public void On_Prev(){
+        this.app.carrot.play_sound_click();
         this.index_view_cur--;
         if(this.index_view_cur<0) this.index_view_cur=this.app.p.Length-1;
         this.Update_p_info();
