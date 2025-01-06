@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ElectronConfiguration3D : MonoBehaviour
 {
@@ -16,6 +18,8 @@ public class ElectronConfiguration3D : MonoBehaviour
 
     [Header("Ui")]
     public GameObject panel_3d;
+    public Text txt_p_name;
+    public TextMeshProUGUI txt_p_key;
     private int index_view_cur=0;
 
     public void On_load()
@@ -29,7 +33,8 @@ public class ElectronConfiguration3D : MonoBehaviour
         this.app.carrot.play_sound_click();
         this.panel_3d.SetActive(true);
         this.app.panel_main.SetActive(false);
-        this.DrawElectronConfiguration(this.app.p[index_view_cur].txt_electron.text);
+        this.app.panel_info.gameObject.SetActive(false);
+        this.Update_p_info();
     }
 
     public void DrawElectronConfiguration(string configuration)
@@ -69,10 +74,10 @@ public class ElectronConfiguration3D : MonoBehaviour
             currentRadius += radiusIncrement;
         }
         this.protonCount=count_e;
-        int massNumber=Mathf.FloorToInt(float.Parse(this.app.p[this.index_view_cur].s_Atomic_Weight));
-        float floatValue = 5.7f;
-        int intValue = Mathf.FloorToInt(floatValue);
-        this.neutronCount=(intValue-this.protonCount);
+        string[] parts = this.app.p[this.index_view_cur].s_Atomic_Weight.ToString().Split('.');
+        int massNumber=int.Parse(parts[0]);
+        this.neutronCount=(massNumber-this.protonCount);
+        Debug.Log(this.app.p[this.index_view_cur].txt_name.text+" -> mass:"+massNumber+" -> pr:"+this.protonCount+" -> Nr:"+this.neutronCount);
         AddProtonsAndNeutrons(nucleus.transform);
     }
 
@@ -137,17 +142,19 @@ public class ElectronConfiguration3D : MonoBehaviour
         this.app.carrot.play_sound_click();
         this.panel_3d.SetActive(false);
         this.app.panel_main.SetActive(true);
+        this.app.camera_controller.transform.rotation = Quaternion.identity;
     }
 
     public void On_Next(){
         this.index_view_cur++;
-        string s_elect=this.app.p[index_view_cur].txt_electron.text;
-        this.DrawElectronConfiguration(s_elect);
+        if(this.index_view_cur>=this.app.p.Length) this.index_view_cur=0;
+        this.Update_p_info();
     }
 
     public void On_Prev(){
         this.index_view_cur--;
-        this.DrawElectronConfiguration(this.app.p[index_view_cur].txt_electron.text);
+        if(this.index_view_cur<0) this.index_view_cur=this.app.p.Length-1;
+        this.Update_p_info();
     }
 
     public void On_zoom_in(){
@@ -162,6 +169,13 @@ public class ElectronConfiguration3D : MonoBehaviour
 
     public void Set_index_view(int index){
         this.index_view_cur=index;
+    }
+
+    private void Update_p_info(){
+        this.txt_p_name.text=this.app.p[this.index_view_cur].txt_name.text;
+        this.txt_p_key.text=this.app.p[this.index_view_cur].txt_key.text;
+        this.DrawElectronConfiguration(this.app.p[index_view_cur].txt_electron.text);
+        Debug.Log(this.app.p[index_view_cur].txt_electron.text);
     }
 }
 
