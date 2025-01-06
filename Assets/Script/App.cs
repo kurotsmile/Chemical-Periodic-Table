@@ -7,9 +7,12 @@ public class App : MonoBehaviour
     [Header("Main Obj")]
     public Carrot.Carrot carrot;
     public Carrot_ads_manage ads;
+    public P_view_info panel_info;
+    public CameraController camera_controller;
+    public ElectronConfiguration3D electron3D;
 
     [Header("UI")]
-    public P_view_info panel_info;
+    public GameObject panel_main;
     public ScrollRect ScrollRect_main;
     public GridLayoutGroup gridLayout_main;
     public GameObject panel_search;
@@ -38,6 +41,8 @@ public class App : MonoBehaviour
         this.ads.On_Load();
         this.ads.onRewardedSuccess=this.carrot.game.OnRewardedSuccess;
 
+        this.electron3D.On_load();
+        this.panel_main.SetActive(true);
         this.panel_info.gameObject.SetActive(false);
         this.panel_search.SetActive(false);
         this.check_resize_cell();
@@ -75,6 +80,7 @@ public class App : MonoBehaviour
         this.ads.On_show_interstitial();
         this.panel_info.view_info(p);
         this.play_sound();
+        this.electron3D.Set_index_view(p.index_p);
     }
 
     public void close_info()
@@ -143,7 +149,6 @@ public class App : MonoBehaviour
             }
         }
     }
-
 
     public void show_search()
     {

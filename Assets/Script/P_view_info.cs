@@ -100,7 +100,6 @@ public class P_view_info : MonoBehaviour
         this.show_body_info_by_roate();
     }
 
-
     public void view_info(P_Element p)
     {
         this.p_cur = p;
