@@ -192,7 +192,7 @@ public class ElectronConfiguration3D : MonoBehaviour
 
     private void Update_p_info(){
         this.txt_s_electrons.text=this.app.p[this.index_view_cur].txt_electron.text;
-        this.txt_p_name.text=this.app.p[this.index_view_cur].txt_name.text;
+        this.txt_p_name.text=(this.app.p[this.index_view_cur].index_p+1)+". "+this.app.p[this.index_view_cur].txt_name.text;
         this.txt_p_key.text=this.app.p[this.index_view_cur].txt_key.text;
         this.DrawElectronConfiguration(this.app.p[index_view_cur].txt_electron.text);
         this.img_mini_map_electrons.sprite=this.app.p[this.index_view_cur].img_electron;
