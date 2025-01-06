@@ -86,6 +86,7 @@ public class App : MonoBehaviour
     public void close_info()
     {
         this.check_list_pin();
+        this.panel_main.SetActive(true);
         this.panel_info.gameObject.SetActive(false);
         this.play_sound();
     }

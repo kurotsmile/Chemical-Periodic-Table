@@ -19,6 +19,11 @@ public class ElectronConfiguration3D : MonoBehaviour
     [Header("Ui")]
     public GameObject panel_3d;
     public Text txt_p_name;
+    public Text txt_count_e;
+    public Text txt_count_p;
+    public Text txt_count_n;
+    public Text txt_s_electrons;
+    public Image img_mini_map_electrons;
     public TextMeshProUGUI txt_p_key;
     private int index_view_cur=0;
 
@@ -76,7 +81,10 @@ public class ElectronConfiguration3D : MonoBehaviour
         this.protonCount=count_e;
         string[] parts = this.app.p[this.index_view_cur].s_Atomic_Weight.ToString().Split('.');
         int massNumber=int.Parse(parts[0]);
-        this.neutronCount=(massNumber-this.protonCount);
+        this.neutronCount=(massNumber-(this.app.p[this.index_view_cur].index_p+1));
+        this.txt_count_e.text="Electrons : "+count_e;
+        this.txt_count_n.text="Neutrons : "+this.neutronCount;
+        this.txt_count_p.text="Protons : "+this.protonCount;
         Debug.Log(this.app.p[this.index_view_cur].txt_name.text+" -> mass:"+massNumber+" -> pr:"+this.protonCount+" -> Nr:"+this.neutronCount);
         AddProtonsAndNeutrons(nucleus.transform);
     }
@@ -167,14 +175,25 @@ public class ElectronConfiguration3D : MonoBehaviour
         this.app.camera_controller.distance++;
     }
 
+    public void On_Detail(){
+        this.app.panel_info.view_info(this.app.p[this.index_view_cur]);
+        this.app.carrot.clear_contain(this.transform);
+        this.app.carrot.play_sound_click();
+        this.panel_3d.SetActive(false);
+        this.app.panel_main.SetActive(false);
+        this.app.camera_controller.transform.rotation = Quaternion.identity;
+    }
+
     public void Set_index_view(int index){
         this.index_view_cur=index;
     }
 
     private void Update_p_info(){
+        this.txt_s_electrons.text=this.app.p[this.index_view_cur].txt_electron.text;
         this.txt_p_name.text=this.app.p[this.index_view_cur].txt_name.text;
         this.txt_p_key.text=this.app.p[this.index_view_cur].txt_key.text;
         this.DrawElectronConfiguration(this.app.p[index_view_cur].txt_electron.text);
+        this.img_mini_map_electrons.sprite=this.app.p[this.index_view_cur].img_electron;
         Debug.Log(this.app.p[index_view_cur].txt_electron.text);
     }
 }
