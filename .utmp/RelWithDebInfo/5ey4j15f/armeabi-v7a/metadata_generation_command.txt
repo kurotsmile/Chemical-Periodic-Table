@@ -8,7 +8,7 @@
 -DANDROID_NDK=D:\Unity3d\Unity3dEditor\6000.0.32f1\Editor\Data\PlaybackEngines\AndroidPlayer\NDK
 -DCMAKE_ANDROID_NDK=D:\Unity3d\Unity3dEditor\6000.0.32f1\Editor\Data\PlaybackEngines\AndroidPlayer\NDK
 -DCMAKE_TOOLCHAIN_FILE=D:\Unity3d\Unity3dEditor\6000.0.32f1\Editor\Data\PlaybackEngines\AndroidPlayer\NDK\build\cmake\android.toolchain.cmake
--DCMAKE_MAKE_PROGRAM=J:\androidSDK\cmake\3.22.1\bin\ninja.exe
+-DCMAKE_MAKE_PROGRAM=D:\Unity3d\Unity3dEditor\6000.0.32f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK\cmake\3.22.1\bin\ninja.exe
 -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=D:\Chemical Periodic Table\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\5ey4j15f\obj\armeabi-v7a
 -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=D:\Chemical Periodic Table\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\5ey4j15f\obj\armeabi-v7a
 -DCMAKE_BUILD_TYPE=RelWithDebInfo

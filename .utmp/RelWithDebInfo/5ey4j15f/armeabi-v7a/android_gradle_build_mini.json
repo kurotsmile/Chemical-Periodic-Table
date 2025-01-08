@@ -6,14 +6,14 @@
   ],
   "cleanCommandsComponents": [
     [
-      "J:\\androidSDK\\cmake\\3.22.1\\bin\\ninja.exe",
+      "D:\\Unity3d\\Unity3dEditor\\6000.0.32f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
       "-C",
       "D:\\Chemical Periodic Table\\.utmp\\RelWithDebInfo\\5ey4j15f\\armeabi-v7a",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
-    "J:\\androidSDK\\cmake\\3.22.1\\bin\\ninja.exe",
+    "D:\\Unity3d\\Unity3dEditor\\6000.0.32f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
     "-C",
     "D:\\Chemical Periodic Table\\.utmp\\RelWithDebInfo\\5ey4j15f\\armeabi-v7a",
     "{LIST_OF_TARGETS_TO_BUILD}"

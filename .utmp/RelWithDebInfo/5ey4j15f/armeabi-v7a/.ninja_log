@@ -1,23 +1,12 @@
 # ninja log v5
-23	2928	7578979242364451	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	e68f98df81b4c363
-57	509	7578979218017544	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	c2d28b5bbd13a21c
-510	1282	7578979223672905	D:/Chemical Periodic Table/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5ey4j15f/obj/armeabi-v7a/libswappywrapper.so	229d8a92681300b7
-6	2215	7578979234106136	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	e7541ec59faa98f3
-51	2383	7578979236805939	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a593ed740228961f
-14	2229	7578979235184938	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ac28e17669ca2d13
-44	2231	7578979235184938	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f3ae7cf5b6788b7
-18	2492	7578979238001477	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	a4e34cef4ad04e3f
-34	2290	7578979235933882	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e9b547086b36c4b4
-28	2632	7578979239381023	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	16265720eed2cb77
-2929	3155	7578979244610946	D:/Chemical Periodic Table/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5ey4j15f/obj/armeabi-v7a/libgame.so	e47e017890934051
-50	470	7578990367956646	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	c2d28b5bbd13a21c
-470	1236	7578990372835226	D:/Chemical Periodic Table/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5ey4j15f/obj/armeabi-v7a/libswappywrapper.so	229d8a92681300b7
-37	2029	7578990383531995	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f3ae7cf5b6788b7
-4	2030	7578990383412681	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	e7541ec59faa98f3
-19	2102	7578990384396201	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ac28e17669ca2d13
-24	2207	7578990385421909	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e9b547086b36c4b4
-43	2298	7578990386387359	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a593ed740228961f
-15	2413	7578990387460795	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	a4e34cef4ad04e3f
-31	2712	7578990390560465	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	16265720eed2cb77
-10	2729	7578990390723787	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	e68f98df81b4c363
-2729	2920	7578990392616411	D:/Chemical Periodic Table/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5ey4j15f/obj/armeabi-v7a/libgame.so	e47e017890934051
+66	1591	7579451058443753	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	c2d28b5bbd13a21c
+33	5997	7579451102675784	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	e7541ec59faa98f3
+4	6129	7579451104023547	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ac28e17669ca2d13
+49	6170	7579451105063027	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f3ae7cf5b6788b7
+55	6265	7579451106600190	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	e9b547086b36c4b4
+1592	6538	7579451103827363	D:/Chemical Periodic Table/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5ey4j15f/obj/armeabi-v7a/libswappywrapper.so	229d8a92681300b7
+60	6677	7579451110125002	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a593ed740228961f
+18	6882	7579451112990681	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	a4e34cef4ad04e3f
+42	7277	7579451116606576	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	16265720eed2cb77
+27	7857	7579451122341820	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	e68f98df81b4c363
+7857	8361	7579451127912240	D:/Chemical Periodic Table/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5ey4j15f/obj/armeabi-v7a/libgame.so	e47e017890934051
